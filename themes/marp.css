@@ -1,0 +1,440 @@
+/*!
+ * @theme marp
+ */
+
+@import "default";
+@import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
+
+:root {
+  --marp-bg: #09090b;
+  --marp-card: #18181b;
+  --marp-card-strong: #27272a;
+  --marp-line: #3f3f46;
+  --marp-text: #e4e4e7;
+  --marp-heading: #ffffff;
+  --marp-muted: #a1a1aa;
+  --marp-primary: oklch(75% 0.183 55.934);
+  --marp-primary-content: oklch(98% 0.016 73.684);
+  --marp-accent: oklch(77% 0.152 181.912);
+  --marp-footer: var(--marp-title);
+  --marp-title: "Presentation Title Goes Here";
+  --marp-presenter: "Presenter Name";
+  --marp-affiliation: "Role, Organization";
+  --marp-kicker: var(--marp-title);
+}
+
+section {
+  width: 1280px;
+  height: 720px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 28px;
+  place-content: flex-start;
+  align-content: stretch;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 82px 58px 88px;
+  background:
+    linear-gradient(var(--marp-line), var(--marp-line)) 58px calc(100% - 72px) / calc(100% - 116px) 1px no-repeat,
+    var(--marp-card);
+  color: var(--marp-text);
+  font-family: "Paperlogy", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  background-clip: padding-box;
+}
+
+section::before {
+  content: var(--title, var(--marp-kicker));
+  position: absolute;
+  top: 42px;
+  left: 60px;
+  width: 1206px;
+  color: var(--marp-primary);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+section::after {
+  position: absolute;
+  right: 58px;
+  bottom: 27px;
+  left: auto;
+  width: auto;
+  height: 30px;
+  padding: 0;
+  color: var(--marp-muted);
+  background: transparent;
+  font-family: "Paperlogy", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Paperlogy", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+strong {
+  font-weight: 500;
+}
+
+h1 {
+  margin: 0 0 28px;
+  color: var(--marp-heading);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+section:not(.title):not(.section):not(.thanks) > h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0 0 18px;
+  color: var(--marp-heading);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  margin: 0 0 14px;
+  color: var(--marp-heading);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+a {
+  color: var(--marp-primary);
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+
+ul,
+ol {
+  margin: 24px 0 0 44px;
+  padding: 0;
+}
+
+section:not(.title):not(.section):not(.thanks) > p,
+section:not(.title):not(.section):not(.thanks) > ul,
+section:not(.title):not(.section):not(.thanks) > ol,
+section:not(.title):not(.section):not(.thanks) > blockquote,
+section:not(.title):not(.section):not(.thanks) > table {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section:not(.title):not(.section):not(.thanks) > ul,
+section:not(.title):not(.section):not(.thanks) > ol {
+  margin-left: 44px;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+li {
+  margin: 0 0 11px;
+  padding-left: 20px;
+}
+
+li::marker {
+  font-size: 0.86em;
+}
+
+li > ul,
+li > ol {
+  margin-top: 8px;
+  margin-left: 45px;
+}
+
+li > ul li,
+li > ol li {
+  margin-bottom: 7px;
+}
+
+section footer {
+  position: absolute;
+  top: auto;
+  left: 58px;
+  right: 58px;
+  bottom: 27px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  color: var(--marp-muted);
+  font-family: "Paperlogy", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  text-transform: none;
+  transform: none;
+}
+
+blockquote {
+  margin: 0;
+  padding: 16px 22px;
+  border-left: 4px solid var(--marp-primary);
+  background: var(--marp-card-strong);
+  color: var(--marp-heading);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+blockquote p {
+  color: inherit;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+th,
+td {
+  padding: 10px 14px;
+  border: 1px solid var(--marp-line);
+}
+
+th {
+  background: var(--marp-card-strong);
+  color: var(--marp-heading);
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.center {
+  display: grid;
+  min-height: 430px;
+  place-items: center;
+  text-align: center;
+}
+
+section.title,
+section.section,
+section.thanks {
+  background: var(--marp-bg);
+  color: var(--marp-text);
+}
+
+section.title::after,
+section.section::before,
+section.section::after,
+section.thanks::after,
+section.thanks::before {
+  display: none !important;
+  content: "" !important;
+}
+
+section.section footer,
+section.thanks footer,
+section.no-footer footer {
+  display: none !important;
+}
+
+section.title {
+  padding: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(251, 146, 60, 0.18), transparent 30%),
+    linear-gradient(135deg, var(--marp-bg), #18181b 72%, #27272a);
+}
+
+section.title::before {
+  content: var(--title, var(--marp-title)) !important;
+  display: block !important;
+  position: absolute;
+  left: 68px;
+  right: auto;
+  top: 288px;
+  bottom: auto;
+  width: 920px;
+  height: auto;
+  padding: 0;
+  background: none;
+  color: var(--marp-heading);
+  font-family: "Paperlogy", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.28;
+  white-space: normal;
+}
+
+section.title h2 {
+  position: absolute;
+  left: 68px;
+  top: 225px;
+  margin: 0;
+  color: var(--marp-primary);
+  font-family: "Paperlogy", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+section.title footer {
+  display: block !important;
+  position: absolute;
+  top: auto;
+  right: 68px;
+  bottom: 84px;
+  left: auto;
+  width: 470px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: var(--marp-text);
+  font-family: "Paperlogy", sans-serif;
+  font-size: 0;
+  line-height: 1.45;
+  text-align: right;
+  text-transform: none;
+  transform: none;
+}
+
+section.title footer::before {
+  content: var(--affiliation, var(--marp-affiliation));
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0 7px;
+  padding: 0;
+  background: none;
+  color: var(--marp-muted);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.45;
+  vertical-align: baseline;
+}
+
+section.title footer::after {
+  content: var(--presenter, var(--marp-presenter));
+  display: block;
+  color: var(--marp-heading);
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+section.section {
+  display: grid;
+  padding: 0;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(251, 146, 60, 0.16), transparent 34%),
+    var(--marp-bg);
+  place-content: center;
+  place-items: center;
+  text-align: center;
+}
+
+section.section h1 {
+  margin: 0;
+  color: var(--marp-heading);
+  font-size: 52px;
+  font-weight: 600;
+}
+
+section.thanks {
+  display: grid;
+  padding: 0;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(251, 146, 60, 0.16), transparent 34%),
+    var(--marp-bg);
+  place-content: center;
+  place-items: center;
+  text-align: center;
+}
+
+section.thanks h1 {
+  margin: 0;
+  color: var(--marp-heading);
+  font-size: 42px;
+  font-weight: 600;
+}
+
+section.contents {
+  padding-top: 82px;
+}
+
+section.contents ol {
+  margin-top: 0;
+  margin-left: 56px;
+}
+
+section.contents li {
+  margin-bottom: 10px;
+  padding-left: 28px;
+}
+
+section.contents li > ol {
+  margin-top: 8px;
+  margin-left: 68px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(var(--column-count, 2), minmax(0, 1fr));
+  gap: var(--column-gap, 40px);
+  width: 100%;
+}
+
+.columns.two {
+  --column-count: 2;
+}
+
+.columns.three {
+  --column-count: 3;
+  --column-gap: 26px;
+  font-size: 21px;
+}
+
+.columns > div {
+  min-width: 0;
+}
+
+.columns.three > div + div {
+  border-left: 1.5px dashed #5d5d5d;
+  padding-left: 22px;
+}
+
+.media-placeholder {
+  display: grid;
+  min-height: 260px;
+  place-items: center;
+  border: 2px dashed #d1d1d1;
+  color: #888888;
+  font-size: 20px;
+}
