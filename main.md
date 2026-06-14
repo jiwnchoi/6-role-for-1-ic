@@ -52,18 +52,6 @@ Swift로 헬로 월드도 모르는데요?
 
 ---
 
-<!-- _class: clean-slide -->
-
-# 왜 이렇게 많은 스택을 하게 됐나
-
-<div class="feature-image">
-<img src="assets/tinder-photo-selector.png" alt="Tinder AI Photo Selector" />
-</div>
-
-<p class="feature-caption">온디바이스부터 LLM까지 각 ML 컴포넌트들이 복잡하게 연결되어 있는 프로젝트</p>
-
----
-
 <!-- _class: secret-slide -->
 
 # 1인 6역의 비밀
