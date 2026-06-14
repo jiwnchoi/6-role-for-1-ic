@@ -240,10 +240,6 @@ Swift로 헬로 월드도 모르는데요?
   </div>
 </div>
 
-<blockquote class="detail-bottom">
-내 역할은 모든 문법을 기억하는 것이 아니라, 올바른 구조를 설계하고 검증하는 것이다.
-</blockquote>
-
 ---
 
 <!-- _class: detail-fill-slide concurrency-review-slide -->

@@ -18,8 +18,8 @@
   --marp-accent: oklch(77% 0.152 181.912);
   --marp-footer: var(--marp-title);
   --marp-title: "제가 이걸 다 해요?: 1인 6역의 비밀";
-  --marp-presenter: "최지원";
-  --marp-affiliation: "Software Engineer, MG AI, Match Group";
+  --marp-presenter: "";
+  --marp-affiliation: "";
   --marp-kicker: var(--marp-title);
 }
 
