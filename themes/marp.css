@@ -1159,6 +1159,14 @@ section.detail-fill-slide h1 {
   text-align: center;
 }
 
+.concurrency-bottom {
+  margin-top: 22px !important;
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
 .architecture-map {
   display: grid;
   grid-template-columns: 0.95fr 68px 1.35fr;

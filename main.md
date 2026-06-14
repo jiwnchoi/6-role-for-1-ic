@@ -4,28 +4,12 @@ theme: marp
 paginate: true
 size: 16:9
 title: "제가 이걸 다 해요?: 1인 6역의 비밀"
-presenter: "최지원"
-affiliation: "Software Engineer, MG AI, Match Group"
 footer: "제가 이걸 다 해요?: 1인 6역의 비밀"
 ---
 
 <!-- _class: title -->
 
 ## LLM으로 영향력 넓히기
-
----
-
-# 나에 대해서
-
-1. **뭐라고 소개할지 모르는 9개월차 개발자**
-   1. 명함에는 Machine Learning Software Engineer라고 적혀있음
-
-2. **원래는 대학원생**
-   1. 2021년부터 논문 쓰려고 React & TypeScript를 많이 함
-
-3. **커리어?**
-   1. 군대 안 갈라고 대학원 감
-   2. 군대 안 갈라고 이 회사에 옴
 
 ---
 
@@ -77,32 +61,6 @@ Swift로 헬로 월드도 모르는데요?
 </div>
 
 <p class="feature-caption">온디바이스부터 LLM까지 각 ML 컴포넌트들이 복잡하게 연결되어 있는 프로젝트</p>
-
----
-
-<!-- _class: clean-slide -->
-
-# 왜 이렇게 많은 스택을 하게 됐나
-
-<div class="stack-pressure">
-  <div class="pressure-item">
-    <span class="pressure-label">On-device Inference</span>
-    <span class="pressure-state">iOS&amp;Android 개발자에게 생소함</span>
-  </div>
-  <div class="pressure-item">
-    <span class="pressure-label">LLM과 ML이 혼합된 비즈니스 로직</span>
-    <span class="pressure-state">백엔드 개발자에게 생소함</span>
-  </div>
-  <div class="pressure-item">
-    <span class="pressure-label">빠른 이터레이션을 통한 개념 증명</span>
-    <span class="pressure-state">프론트엔드 개발자 하기 싫어함</span>
-  </div>
-  <div class="pressure-item">
-    <span class="pressure-label">ML 모델링</span>
-    <span class="pressure-state">팀에 인력이 없다</span>
-  </div>
-  <div class="pressure-conclusion">할 사람이 없다...</div>
-</div>
 
 ---
 
@@ -203,7 +161,7 @@ Swift로 헬로 월드도 모르는데요?
 
   <div class="flow-bridge">
     <span><b class="same-icon">🤝</b> 기다리는 동안 일하기</span>
-    <span><img class="diff-icon" src="assets/icons/difference.svg" alt=""> 단일 루프 → 멀티코어</span>
+    <span><img class="diff-icon" src="assets/icons/difference.svg" alt=""> Promise → Coroutine</span>
   </div>
 
   <div class="flow-step">
@@ -214,7 +172,7 @@ Swift로 헬로 월드도 모르는데요?
 
   <div class="flow-bridge">
     <span><b class="same-icon">🤝</b> 구조적 동시성</span>
-    <span><img class="diff-icon" src="assets/icons/difference.svg" alt=""> 단일 이벤트 루프 → 멀티코어 executor</span>
+    <span><img class="diff-icon" src="assets/icons/difference.svg" alt=""> Single Event Loop → Multi-core</span>
   </div>
 
   <div class="flow-step">
@@ -322,7 +280,7 @@ Swift로 헬로 월드도 모르는데요?
       <span>race condition</span>
       <span>main thread blocking</span>
       <span>shared state mutation</span>
-      <span>cancellation leak</span>
+      <span>lifecycle 밖에서 도는 task</span>
     </div>
   </div>
 
@@ -336,6 +294,10 @@ Swift로 헬로 월드도 모르는데요?
     <p>UI 업데이트 경계</p>
   </div>
 </div>
+
+<blockquote class="concurrency-bottom">
+AI가 코드를 써도, 내가 검증하는 것은 문법이 아니라 실행 모델이다.
+</blockquote>
 
 ---
 
