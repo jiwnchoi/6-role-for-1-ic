@@ -240,59 +240,8 @@ Swift로 헬로 월드도 모르는데요?
   </div>
 </div>
 
----
-
-<!-- _class: detail-fill-slide concurrency-review-slide -->
-
-# 동시성은 문법보다 실행 모델이 중요하다
-
-<div class="platform-concurrency">
-  <div class="concurrency-stage syntax-stage">
-    <span class="box-kicker">플랫폼별 문법</span>
-    <div class="syntax-stack">
-      <div class="syntax-row">
-        <img src="assets/logos/swift.svg" alt="Swift">
-        <strong>iOS</strong>
-        <span>async/await · actor · MainActor</span>
-      </div>
-      <div class="syntax-row">
-        <img src="assets/logos/kotlin.svg" alt="Kotlin">
-        <strong>Android</strong>
-        <span>coroutine · dispatcher · lifecycle scope</span>
-      </div>
-      <div class="syntax-row">
-        <img src="assets/logos/javascript.svg" alt="JavaScript">
-        <strong>JavaScript</strong>
-        <span>event loop · promise · worker</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="flow-arrow">→</div>
-
-  <div class="concurrency-stage risk-stage">
-    <span class="box-kicker">공통 위험 구조</span>
-    <div class="risk-flow-list">
-      <span>race condition</span>
-      <span>main thread blocking</span>
-      <span>shared state mutation</span>
-      <span>lifecycle 밖에서 도는 task</span>
-    </div>
-  </div>
-
-  <div class="flow-arrow">→</div>
-
-  <div class="concurrency-stage review-stage">
-    <span class="box-kicker">검토자의 시야</span>
-    <p>실행 위치</p>
-    <p>취소와 정리</p>
-    <p>공유 상태 접근</p>
-    <p>UI 업데이트 경계</p>
-  </div>
-</div>
-
-<blockquote class="concurrency-bottom">
-AI가 코드를 써도, 내가 검증하는 것은 문법이 아니라 실행 모델이다.
+<blockquote class="detail-bottom">
+내 역할은 모든 문법을 기억하는 것이 아니라, 올바른 구조를 설계하고 검증하는 것이다.
 </blockquote>
 
 ---
